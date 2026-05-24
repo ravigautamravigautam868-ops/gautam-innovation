@@ -1,10 +1,21 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gautam Innovations | Linktree</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // 📢 RAVI, APNE SABHI LINKS BAS IN CODES KE AAGE WALE " " MEIN PASTE KAR DIJIYE:
+        const MY_DRIVE_PORTFOLIO_LINK   = "https://drive.google.com/file/d/160qMAhCDkC4NPPm8sVecRHN6mbbzVk4o/view?usp=drivesdk";
+        const MY_DRIVE_SIMULATION_LINK  = "https://drive.google.com/drive/folders/1LuKdK5if--Xuj6aA72MBIQHwGiGVS_uf";
+        const MY_DRIVE_RESUME_LINK      = "https://drive.google.com/file/d/1SUbxhw0qlR7N82Dfeb_IhyIha5YYA6Ht/view?usp=drivesdk";
+        const MY_LINKEDIN_USERNAME      = "https://www.instagram.com/gautam_innovations?igsh=bWFxbGZjZGNxbXpj"; // Jaise: ravi-gautam
+        const MY_EMAIL_ID               = "gautaminnovations@gmail.com";
+        const MY_INSTAGRAM_USERNAME     = "Gautam_Innovations";
+    </script>
+
     <style>
         :root {
             --bg-color: #0d1117;
@@ -108,22 +119,36 @@
 </head>
 <body>
     <div class="container">
-        <img class="profile-img" src="https://via.placeholder.com/150" alt="Gautam Innovations Logo">
+        <img class="profile-img" src="logo.png" onerror="this.src='https://via.placeholder.com/150'" alt="Gautam Innovations Logo">
         <h1>Gautam Innovations</h1>
-        <div class="handle">@Gautam_Innovations</div>
+        <div class="handle" id="html-handle"></div>
         <p class="bio">Shaping the Future Through Innovation<br>⚙️ Mechanical Engineer | Designer | Innovator ⚙️</p>
+        
         <div class="links-container">
-            <a href="#" target="_blank" class="link-btn"><i class="fa-solid fa-briefcase"></i> View My Portfolio</a>
-            <a href="#" target="_blank" class="link-btn"><i class="fa-solid fa-gears"></i> ESI Simulation Projects</a>
-            <a href="#" target="_blank" class="link-btn"><i class="fa-solid fa-file-arrow-down"></i> Download Resume / CV</a>
-            <a href="mailto:gautaminnovations@gmail.com" class="link-btn"><i class="fa-solid fa-envelope"></i> Contact For Collaboration</a>
+            <a id="btn-portfolio" href="#" target="_blank" class="link-btn"><i class="fa-solid fa-briefcase"></i> View My Portfolio</a>
+            <a id="btn-simulation" href="#" target="_blank" class="link-btn"><i class="fa-solid fa-gears"></i> ESI Simulation Projects</a>
+            <a id="btn-resume" href="#" target="_blank" class="link-btn"><i class="fa-solid fa-file-arrow-down"></i> Download Resume / CV</a>
+            <a id="btn-email" href="#" class="link-btn"><i class="fa-solid fa-envelope"></i> Contact For Collaboration</a>
         </div>
+        
         <div class="social-icons">
-            <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://instagram.com/Gautam_Innovations" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a id="icon-linkedin" href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a id="icon-instagram" href="#" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <footer>&copy; 2026 Gautam Innovations. All Rights Reserved.</footer>
     </div>
+
+    <script>
+        // Automatic link binding logic
+        document.getElementById("html-handle").innerText = "@" + MY_INSTAGRAM_USERNAME;
+        document.getElementById("btn-portfolio").href = MY_DRIVE_PORTFOLIO_LINK;
+        document.getElementById("btn-simulation").href = MY_DRIVE_SIMULATION_LINK;
+        document.getElementById("btn-resume").href = MY_DRIVE_RESUME_LINK;
+        document.getElementById("btn-email").href = "mailto:" + MY_EMAIL_ID;
+        document.getElementById("icon-linkedin").href = "https://linkedin.com/in/" + MY_LINKEDIN_USERNAME;
+        document.getElementById("icon-instagram").href = "https://instagram.com/" + MY_INSTAGRAM_USERNAME;
+    </script>
 </body>
 </html>
+
 
